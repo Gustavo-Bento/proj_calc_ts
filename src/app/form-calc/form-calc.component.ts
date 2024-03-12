@@ -8,9 +8,27 @@ import { Component } from '@angular/core';
 export class FormCalcComponent {
   num1: number = 0;
   num2: number = 0;
-  sum: number = 0;
+  option: number = 0;
+  res: number = 0;
 
-  onClickSum(){
-    this.sum = this.num1 + this.num2;
+  onClickCalc(){
+    if(this.option==1){
+      this.res = this.num1 + this.num2;
+    }
+    else{
+      if(this.option==2){
+        this.res = this.num1 - this.num2;
+      }
+      else {
+        if(this.option==3){
+          this.res = this.num1 / this.num2;
+        }
+        else {
+          if(this.option==4){
+            this.res = this.num1 * this.num2;
+          }
+        }
+      }
+    }
   }
 }

@@ -4,16 +4,16 @@
     <input type="number" [(ngModel)]="num1" name="num1">
     <label for="fname">Segundo valor:</label>
     <input type="number" [(ngModel)]="num2" name="num2">
-    <label for="fname">Escolha a operação</label>
-    <select name="operacao" id="operacao">
-      <option value="adicao">Adição</option>
-      <option value="subtracao">Subtração</option>
-      <option value="multiplicacao">Multiplicação</option>
-      <option value="divisao">Divisão</option>
+    <label for="fname">Seleciona a Operação:</label>
+    <select name="option" [(ngModel)]="option">
+      <option [ngValue]="1" value="1">Adição</option>
+      <option [ngValue]="2" value="2">Subtração</option>
+      <option [ngValue]="3" value="3">Divisão</option>
+      <option [ngValue]="4" value="4">Multiplicação</option>
     </select>
-    <button (click)="onClickSum()">Resultado</button>
+    <button (click)="onClickCalc()">Resultado</button>
     <p>
-      Resultado: {{sum}}
+      Resultado: {{res}}
     </p>
   </form>
 </div>
